@@ -28,8 +28,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_0" translatesAutoresizingMaskIntoConstraints="NO" id="450-UR-svN" userLabel="0">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="224"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_0" translatesAutoresizingMaskIntoConstraints="NO" id="450-UR-svN" userLabel="cellImage">
+                                                    <rect key="frame" x="16" y="4" width="382" height="216"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -37,19 +37,18 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 августа 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgF-5P-Ely" userLabel="Date Label">
-                                                    <rect key="frame" x="24" y="200" width="102.5" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgF-5P-Ely" userLabel="dateLabel">
+                                                    <rect key="frame" x="24" y="212" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" name="YP White"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-UW-M0m" userLabel="Like Button">
-                                                    <rect key="frame" x="356" y="0.0" width="42" height="42"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-UW-M0m" userLabel="likeButton">
+                                                    <rect key="frame" x="356" y="4" width="42" height="42"/>
                                                     <color key="tintColor" name="YP White(Alpha 50)"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="No Active">
-                                                        <color key="titleColor" name="YP White(Alpha 50)"/>
+                                                    <state key="normal" image="like_button_on">
+                                                        <color key="titleColor" name="YP White"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -57,16 +56,21 @@
                                             <constraints>
                                                 <constraint firstItem="Nte-UW-M0m" firstAttribute="top" secondItem="450-UR-svN" secondAttribute="top" id="0aw-lh-Nfp"/>
                                                 <constraint firstItem="Nte-UW-M0m" firstAttribute="trailing" secondItem="450-UR-svN" secondAttribute="trailing" id="4GY-MT-HjN"/>
-                                                <constraint firstAttribute="bottom" secondItem="450-UR-svN" secondAttribute="bottom" id="GbS-c1-Don"/>
+                                                <constraint firstAttribute="bottom" secondItem="450-UR-svN" secondAttribute="bottom" constant="4" id="GbS-c1-Don"/>
                                                 <constraint firstAttribute="trailing" secondItem="450-UR-svN" secondAttribute="trailing" constant="16" id="Qxl-wM-N91"/>
                                                 <constraint firstItem="450-UR-svN" firstAttribute="bottom" secondItem="tgF-5P-Ely" secondAttribute="bottom" constant="8" id="crw-WE-aIC"/>
-                                                <constraint firstItem="450-UR-svN" firstAttribute="top" secondItem="LAh-Mk-rrl" secondAttribute="top" id="eTL-Ba-1ko"/>
+                                                <constraint firstItem="450-UR-svN" firstAttribute="top" secondItem="LAh-Mk-rrl" secondAttribute="top" constant="4" id="eTL-Ba-1ko"/>
                                                 <constraint firstItem="tgF-5P-Ely" firstAttribute="leading" secondItem="450-UR-svN" secondAttribute="leading" constant="8" id="iap-Ll-StU"/>
                                                 <constraint firstItem="450-UR-svN" firstAttribute="leading" secondItem="LAh-Mk-rrl" secondAttribute="leading" constant="16" id="mLD-P1-pst"/>
                                                 <constraint firstItem="450-UR-svN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tgF-5P-Ely" secondAttribute="trailing" constant="8" id="nrw-op-daD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="450-UR-svN" id="CVn-n2-Rrp"/>
+                                            <outlet property="dateLabel" destination="tgF-5P-Ely" id="mIy-hP-BgH"/>
+                                            <outlet property="likeButton" destination="Nte-UW-M0m" id="55I-2F-UU6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -95,7 +99,7 @@
     </scenes>
     <resources>
         <image name="Image_0" width="200" height="132"/>
-        <image name="No Active" width="42" height="42"/>
+        <image name="like_button_on" width="42" height="42"/>
         <namedColor name="YP Black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
