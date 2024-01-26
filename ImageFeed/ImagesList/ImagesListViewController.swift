@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  ImageFeed
-//
-//  Created by Алан Мун on 23.01.2024.
-//
-
 import UIKit
 
 class ImagesListViewController: UIViewController {
